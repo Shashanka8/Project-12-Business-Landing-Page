@@ -42,13 +42,17 @@ nav .list {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  cursor: pointer;
 }
 
 nav .list-item {
   list-style: none;
-  padding-right: 60px;
+  margin-right: 60px;
   font-weight: 500;
+  cursor: pointer;
+}
+
+nav .list-item:last-child {
+  margin-right: 0;
 }
 
 .list-item.active {
@@ -64,6 +68,12 @@ nav .list-item {
   font-weight: 700;
   margin-top: -10px;
   margin-left: 100px;
+}
+
+.menu-icon {
+  display: none;
+  height: 32px;
+  cursor: pointer;
 }
 
 .hero {
@@ -339,3 +349,149 @@ footer {
 }
 
 /* ----------- Footer end ----------- */
+
+/* Media queries */
+@media screen and (max-width: 1199px) {
+  nav {
+    padding: 2% 3% 0 3%;
+  }
+  nav .list-item {
+    margin-right: 20px;
+  }
+  .hero {
+    padding: 3% 3% 5% 3%;
+  }
+  .hero-left img {
+    height: 340px;
+  }
+  .hero-right {
+    padding: 30px 0;
+    margin-left: 50px;
+  }
+  .hero-right form button {
+    padding: 12px 15px;
+  }
+  .teams-section,
+  .service-section,
+  .business-section,
+  footer {
+    padding: 2% 3%;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  nav .logo img {
+    height: 32px;
+  }
+  .nav-btn {
+    margin-left: 20px;
+    padding: 8px 16px;
+  }
+  .hero {
+    flex-direction: column;
+    padding: 2% 5%;
+  }
+  .hero-left img {
+    display: block;
+    margin: 0 auto;
+  }
+  .hero-right {
+    margin-left: 0;
+  }
+  .hero-right form {
+    margin: 0 auto;
+    max-width: 60%;
+  }
+  .team-cards {
+    margin: 30px 0;
+  }
+  .team-card {
+    margin: 10px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  nav .list {
+    display: none;
+  }
+  .menu-icon {
+    display: inline-block;
+  }
+  .hero {
+    padding: 5% 3%;
+  }
+  .hero-right form {
+    max-width: 80%;
+  }
+  .business-footer img {
+    width: 100%;
+    height: 400px;
+    margin: 20px 0;
+  }
+  .service-card .card-image {
+    width: 44%;
+  }
+  .footer-links-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .menu-icon,
+  nav .logo img {
+    height: 26px;
+  }
+  .hero-left img {
+    height: 260px;
+    width: 94%;
+  }
+  .hero-right h1 {
+    font-size: 36px;
+  }
+  .hero-right form {
+    max-width: 100%;
+  }
+  .hero-right form button {
+    padding: 10px;
+  }
+  .business-section h1,
+  .service-section h1 {
+    font-size: 30px;
+  }
+  .business-content {
+    margin: 20px 0;
+  }
+  .service-card {
+    flex-direction: column;
+  }
+  .service-card:nth-child(2) {
+    flex-direction: column-reverse;
+  }
+  .service-card .card-text {
+    width: 100%;
+  }
+  .service-card .card-image {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .teams-section-heading h2 {
+    width: 45%;
+    font-size: 26px;
+  }
+  .teams-section-heading p {
+    padding: 0 10px;
+  }
+  .team-cards {
+    flex-direction: column;
+  }
+  .footer-logo {
+    display: none;
+  }
+  .social-icons span {
+    margin-top: 10px;
+  }
+  .footer-links-wrapper {
+    margin-top: 20px;
+  }
+}
